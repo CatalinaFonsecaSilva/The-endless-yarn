@@ -1,12 +1,303 @@
-// @import "base";
+//@import "base";
 // You need the base only when you are not using bootstrap. In that case, go to _base.scss
 // to customize it as you may want.
 
 @import "variables";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+// Google fonts links
+
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap');
+
 // Write your sass code here or import partials
 
-h1 {
-  color: tomato;
+// Fonts:
+
+$brand-font-family: 'Handlee', cursive;
+$content-font-family: 'Zen Kaku Gothic New', sans-serif;
+
+// Colors:
+$toggle-icon-color: "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2889, 63, 47, 0.7%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e";
+$primary-color: #593f2f;
+$font-color: #260B01;
+$secondary-color: #A6A09C;
+$accent-color: hsla(28, 28%, 51%, 0.7);
+$secondary-color2: #BFBCBA;
+
+// Background image
+$bg-img-knitted: url(/src/images/knitted-sweater.png);
+$bg-img-linear: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25) 1px, transparent 1px, transparent 6px);
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $content-font-family;
+
+  a {
+    color: $font-color;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $accent-color;
+
+  }
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $secondary-color2;
+}
+
+header {
+
+  img {
+    filter: invert(100%);
+  }
+
+  .navbar {
+    background-image: $bg-img-knitted;
+    background-size: cover;
+    background-color: $primary-color;
+  }
+
+  .navbar-brand {
+    font-family: $brand-font-family;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: $secondary-color2;
+    margin-left: 50px;
+    letter-spacing: 7px;
+    text-shadow: 0px 1px 0px #000000;
+  }
+
+  .navbar-toggler {
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    background-color: $accent-color;
+    color: $font-color;
+    font-size: 2rem;
+    font-weight: 400;
+    height: 50px;
+    margin-right: 30px;
+
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url($toggle-icon-color);
+  }
+
+  .navbar-collapse {
+    background-color: $secondary-color2;
+    color: $primary-color;
+    font-size: 2rem;
+    font-weight: 500;
+
+
+  }
+
+  .navbar-collapse li {
+    margin-left: 50px;
+
+  }
+
+  @media screen and (min-width:768px) {
+    .navbar-brand {
+      font-size: 2.5rem;
+    }
+
+    .navbar-collapse {
+      background-color: transparent;
+      //background-color: $secondary-color2;
+      //opacity: 0.3;
+    }
+
+    .navbar-collapse a {
+      color: $font-color;
+      font-size: 2.5rem;
+      font-weight: 600;
+      letter-spacing: 5px;
+      
+
+    }
+
+  }
+
+}
+
+#hero {
+  background-image: url(/src/images/yarn-hero.jpeg);
+  background-size: 100%;
+  height: 30vh;
+
+  h1 {
+    color: black;
+    font-family: $brand-font-family;
+    font-size: 3rem;
+    margin-left: 55%;
+    padding-top: 15%;
+
+  }
+
+  @media screen and (min-width:768px) {
+    background-position: center;
+
+    h1 {
+      font-size: 4rem;
+      margin-left: 60%;
+      padding-top: 5%;
+    }
+  }
+
+
+}
+
+#projects {
+  background-color: $secondary-color;
+  background: $bg-img-linear;
+
+  h2 {
+    color: $font-color;
+    font-family: $content-font-family;
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding: 50px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .section-text {
+    margin: 0 auto 1.2rem;
+    text-align: center;
+    width: 70vw;
+    font-size: 1.7rem;
+
+  }
+
+  .card {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 5%;
+    width: 80vw;
+
+    img {
+      border-radius: 50%;
+      height: 20rem;
+      width: 20rem;
+    }
+
+    img:hover {
+      opacity: 0.5;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+
+
+  }
+
+  @media screen and (min-width:768px) {
+    h2 {
+      font-size: 3rem;
+    }
+    .section-text, .card p{
+      font-size: 2rem;
+    }
+        
+  }
+
+}
+
+#inspiration {
+  margin-bottom: 60px;
+
+  h2 {
+    color: $font-color;
+    font-family: $content-font-family;
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 0;
+
+  }
+
+  .section-text {
+    margin: 0 auto 2rem;
+    text-align: center;
+    width: 70vw;
+    font-size: 1.7rem;
+
+  }
+
+  img {
+
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+  }
+
+  .text-carousel {
+    background-color: $secondary-color;
+    opacity: 0.5;
+    font-size: 3rem;
+    padding-top: 75px;
+    height: 200px;
+    width: 200px;
+  }
+
+  @media screen and (min-width:768px) {
+    h2 {
+      font-size: 3rem;
+    }
+    .section-text{
+      font-size: 2rem;
+    }
+        
+  }
+
+}
+
+footer {
+  background-color: $primary-color;
+  color: $secondary-color2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  padding: 10% auto;
+  font-size: 1.7rem;
+
+  a {
+    color: $secondary-color2;
+  }
+  @media screen and (min-width:768px) {
+    
+      font-size: 2rem;
+    
+    
+        
+  }
+
 }

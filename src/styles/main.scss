@@ -13,12 +13,14 @@
 
 // Write your sass code here or import partials
 
-// Fonts:
+// Fonts - Variables:
 
 $brand-font-family: 'Handlee', cursive;
 $content-font-family: 'Zen Kaku Gothic New', sans-serif;
 
-// Colors:
+// Colors - Variables:
+//$toggle-icon-color ändert der Farbe von Hamburguer Icon
+
 $toggle-icon-color: "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2889, 63, 47, 0.7%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e";
 $primary-color: #593f2f;
 $font-color: #260B01;
@@ -26,11 +28,11 @@ $secondary-color: #A6A09C;
 $accent-color: hsla(28, 28%, 51%, 0.7);
 $secondary-color2: #BFBCBA;
 
-// Background image
+// Background image -Variables
 $bg-img-knitted: url(/src/images/knitted-sweater.png);
 $bg-img-linear: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25) 1px, transparent 1px, transparent 6px);
 
-
+//Soft reset + anchor tag Einstellung
 
 * {
   margin: 0;
@@ -49,6 +51,8 @@ $bg-img-linear: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.25), rgb
   }
 }
 
+// Font size Enstellung in html File
+
 :root {
   font-size: 62.5%;
 }
@@ -56,6 +60,8 @@ $bg-img-linear: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.25), rgb
 body {
   background-color: $secondary-color2;
 }
+
+// Header 
 
 header {
 
@@ -114,6 +120,8 @@ header {
 
   }
 
+  //Media query: ändert das Aussehen der Navbar ab 768px
+
   @media screen and (min-width:768px) {
     .navbar-brand {
       font-size: 2.5rem;
@@ -138,6 +146,8 @@ header {
 
 }
 
+//Hero section
+
 #hero {
   background-image: url(/src/images/yarn-hero.jpeg);
   background-size: 100%;
@@ -152,6 +162,8 @@ header {
 
   }
 
+//Media query:ändert das Aussehen dieses Abschnitts ab 768px 
+
   @media screen and (min-width:768px) {
     background-position: center;
 
@@ -164,6 +176,9 @@ header {
 
 
 }
+
+
+//Projects section
 
 #projects {
   background-color: $secondary-color;
@@ -217,6 +232,8 @@ header {
 
   }
 
+  //Media query
+
   @media screen and (min-width:768px) {
     h2 {
       font-size: 3rem;
@@ -228,6 +245,8 @@ header {
   }
 
 }
+
+////Inspiration section
 
 #inspiration {
   margin-bottom: 60px;
@@ -267,6 +286,8 @@ header {
     width: 200px;
   }
 
+  //Media query
+
   @media screen and (min-width:768px) {
     h2 {
       font-size: 3rem;
@@ -278,6 +299,8 @@ header {
   }
 
 }
+
+//Footer
 
 footer {
   background-color: $primary-color;
@@ -292,12 +315,13 @@ footer {
   a {
     color: $secondary-color2;
   }
+
+  //Media Query
+
   @media screen and (min-width:768px) {
     
       font-size: 2rem;
-    
-    
-        
+            
   }
 
 }
